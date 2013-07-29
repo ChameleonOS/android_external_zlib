@@ -14,7 +14,7 @@
 struct internal_state      {int dummy;}; /* for buggy compilers */
 #endif
 
-z_const char * const z_errmsg[10] = {
+const char * const z_errmsg[10] = {
 "need dictionary",     /* Z_NEED_DICT       2  */
 "stream end",          /* Z_STREAM_END      1  */
 "",                    /* Z_OK              0  */
@@ -322,7 +322,3 @@ void ZLIB_INTERNAL zcfree (opaque, ptr)
 #endif /* MY_ZCALLOC */
 
 #endif /* !Z_SOLO */
-
-#if defined(__i386__) || defined(__x86_64__)
-#  include "x86/cpudet.c"
-#endif

@@ -22,14 +22,6 @@ zlib_files := \
 	src/uncompr.c \
 	src/zutil.c
 
-zlib_arm_files :=
-zlib_arm_flags :=
-
-ifeq ($(ARCH_ARM_HAVE_NEON),true)
-	zlib_arm_files += contrib/inflateneon/inflate_fast_copy_neon.s
-	zlib_arm_flags += -D__ARM_HAVE_NEON
-endif
-
 LOCAL_MODULE := libz
 LOCAL_MODULE_TAGS := optional
 LOCAL_CFLAGS += -O3 -DUSE_MMAP

@@ -29,7 +29,7 @@
      D ZLIB_VER_REVISION...
      D                 C                   7
      D ZLIB_VER_SUBREVISION...
-     D                 C                   1
+     D                 C                   0
       *
       *  Other equates.
       *
@@ -358,12 +358,6 @@
      D  strm                               like(z_stream)                       Expansion stream
      D  dictionary                65535    const options(*varsize)              Dictionary bytes
      D  dictLength                   10U 0 value                                Dictionary length
-      *
-     D inflateGetDictionary...
-     D                 PR            10I 0 extproc('inflateGetDictionary')      Get dictionary
-     D  strm                               like(z_stream)                       Expansion stream
-     D  dictionary                65535    options(*varsize)                    Dictionary bytes
-     D  dictLength                   10U 0                                      Dictionary length
       *
      D inflateSync     PR            10I 0 extproc('inflateSync')               Sync. expansion
      D  strm                               like(z_stream)                       Expansion stream
